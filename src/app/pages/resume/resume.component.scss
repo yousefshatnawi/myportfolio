@@ -1,0 +1,81 @@
+@use '../../../styles/variables' as *;
+
+// ✨ Animation Keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume {
+  padding: $section-padding;
+  background: linear-gradient(to right, $dark-blue-start, $dark-blue-mid, $dark-blue-end);
+  color: $text-color-light;
+
+  // 🔥 Animate the whole resume wrapper
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+
+    // ✨ Animate section headers
+    h2 {
+      color: $primary-color;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: $text-color-light;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: $text-color-muted;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.7s ease-out forwards;
+        animation-delay: 0.6s;
+      }
+    }
+
+    p {
+      line-height: 1.6;
+      color: $text-color-muted;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.7s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+  }
+}

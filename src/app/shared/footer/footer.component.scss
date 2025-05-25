@@ -1,0 +1,84 @@
+@use '../../../styles/variables' as *;
+
+// ✨ Animation Keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  background-color: $dark-blue-start; // نفس لون الناف بار
+  color: $text-color-muted;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid $primary-color-muted;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .footer-text {
+      p {
+        margin: 0.3rem 0;
+        font-size: 0.95rem;
+        color: $text-color-muted;
+        line-height: 1.6;
+      }
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+
+      a {
+        color: $text-color-light;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+          transform: scale(1.2);
+        }
+
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (min-width: 768px) {
+  footer {
+    font-size: 1rem;
+
+    .footer-content {
+      gap: 1.2rem;
+
+      .footer-text p {
+        font-size: 1rem;
+      }
+
+      .socials a {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

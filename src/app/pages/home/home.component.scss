@@ -1,0 +1,162 @@
+@use '../../../styles/variables' as *;
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, $dark-blue-start, $dark-blue-mid, $dark-blue-end);
+  color: $text-color-light;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+
+    .intro {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4rem;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-img {
+        flex-shrink: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        .profile-img {
+          width: 320px;
+          max-width: 100%;
+          height: auto;
+          border-radius: 90%;
+          box-shadow: 0 40px 25px rgba(0, 0, 0, 0.3);
+
+          @media (max-width: 768px) {
+            width: 250px;
+          }
+
+          @media (max-width: 480px) {
+            width: 180px;
+          }
+        }
+      }
+
+      .lg\:w-1\/3 {
+        width: 100.333333%;
+      }
+
+      .intro-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 1rem;
+
+        h1 {
+          font-size: 2.8rem;
+          margin: 0;
+          color: $text-color-light;
+
+          @media (max-width: 768px) {
+            font-size: 2.2rem;
+          }
+        }
+
+        h2 {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: $text-color-light;
+          margin: 0;
+        }
+
+        p {
+          font-size: 1.1rem;
+          margin-top: 1rem;
+          margin-bottom: 1.5rem;
+          line-height: 1.6;
+          color: $text-color-light;
+        }
+
+        .info-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          span {
+            color: $primary-color;
+            font-size: 1.2rem;
+            transform: translateY(2px); // slight adjustment for alignment
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+              margin: 0;
+              font-size: 1rem;
+              color: $text-color-light;
+            }
+
+            p {
+              margin: 0;
+              font-size: 0.9rem;
+              color: $text-color-muted;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+
+          @media (min-width: 768px) {
+            justify-content: flex-start;
+          }
+
+          .btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: $border-radius;
+            background-color: $primary-color;
+            color: $text-color-light;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+              background-color: $primary-color-hover;
+            }
+
+            &.btn-secondary {
+              background-color: transparent;
+              border: 1px solid $border-color-light;
+
+              &:hover {
+                background-color: $text-color-light;
+                color: $dark-blue-end;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-fade-in-up {
+    animation-duration: 0.6s;
+    animation-delay: 0s !important;
+  }
+}

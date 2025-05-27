@@ -9,6 +9,9 @@ import { ResumeComponent } from './resume.component';
   declarations: [
     ResumeComponent
   ],
+  exports:[
+    ResumeComponent
+  ],
   imports: [
     CommonModule,
     ResumeRoutingModule

@@ -10,6 +10,9 @@ import { SharedModule } from "../../shared/shared.module";
   declarations: [
     HomeComponent
   ],
+  exports:[
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

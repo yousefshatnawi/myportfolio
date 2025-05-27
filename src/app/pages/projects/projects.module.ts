@@ -9,6 +9,9 @@ import { ProjectsComponent } from './projects.component';
   declarations: [
     ProjectsComponent
   ],
+  exports:[
+    ProjectsComponent
+  ],
   imports: [
     CommonModule,
     ProjectsRoutingModule

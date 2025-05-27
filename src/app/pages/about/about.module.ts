@@ -9,6 +9,9 @@ import { AboutComponent } from './about.component';
   declarations: [
     AboutComponent
   ],
+  exports:[
+  AboutComponent],
+  
   imports: [
     CommonModule,
     AboutRoutingModule
